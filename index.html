@@ -24,7 +24,7 @@
        <div class="ingredients">
            <form id="add-ingredients">
             <label>Ingredients:
-                <input type="text" name="ingredients" id="ingredients" />
+                <input type="text" name="ingredients" id="ingredients-List" />
             </label>
 
             <label>Quantity:
@@ -42,11 +42,29 @@
             </label>
             <button type="submit">Add Ingredients</button>
            </form>
+           <div class="ingredient-list">
+               <ul id="ingredient-list">
+               </ul>
+               <button id="removelist">Remove last item</button>
+           </div>
        </div>
-            
-           
         </section>
 
+        <section class="save">
+
+            <h4>Save Meal</h4>
+
+            <label> Meal Name 
+                <input type="text" id="meal-name">
+            </label>
+
+            <button id="save-meal">Save Meal</button>
+
+        </section>
+<section>
+    <h5>Meals</h5>
+    <ul id="meal-list"></ul>
+</section>
 
 
     </main>
