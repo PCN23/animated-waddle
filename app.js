@@ -1,13 +1,12 @@
 // import functions and grab DOM elements
 
-import { renderIngredientLI, renderMealLI } from './utils';
+import { renderIngredientLI, renderMealLI } from './utils.js';
 
 
 const form = document.getElementById('add-ingredients');
-const ingredientsList = document.getElementById('ingredient-list');
+const ingredientsList = document.getElementById('ingredients-input');
 const mealList = document.getElementById('meal-list');
-
-const remove = document.getElementById('remove');
+const remove = document.getElementById('removeList');
 const mealName = document.getElementById('meal-name');
 const save = document.getElementById('save-meal');
  
@@ -44,17 +43,24 @@ form.addEventListener('submit', (e) => {
     const data = new FormData(form);
     const item = {
         ingredients: data.get('ingredients'),
-        qty: data.get('qty'),
+        qty: data.get('quantity'),
         measurement: data.get('measurement'),
     };
-    ingredients.push.get('ingredients'),
+    ingredients.push.item;
+    renderIngredients();
     form.reset();
 });
 
-remove.addEventListener('click', () =>{
-  // get user input
+remove.addEventListener('click', () => {
     ingredients.pop();
-  // use user input to update state 
-  // update DOM to reflect the new state
+    renderIngredients();
+});
+
+save.addEventListener('click', () => {
+    const name = mealName.value;
+    const count = ingredients.length;
+    meals.push({ name, count }); 
+    renderMeals();
+    resetIngredients();
 });
 
