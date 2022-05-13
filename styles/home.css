@@ -1,1 +1,15 @@
 /* add home page styles here */
+
+#add-ingredients {
+    background-color: rgb(190, 183, 241);
+    border: 10px solid black;
+    height: 160px;
+    align-items: center;
+    display: center;
+    
+}
+
+#serving {
+    background-color: rgb(227, 239, 48);
+    text-align: center;
+}

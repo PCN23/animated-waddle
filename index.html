@@ -19,22 +19,53 @@
         </div>
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-        </section>
-
         <section>
             <h3>Add Ingredients</h3>
-            <div class="add Ingredients"> 
-                
-            </div>
+       <div class="ingredients">
+           <form id="add-ingredients">
+            <label>Ingredients:
+                <input type="text" name="ingredients" id="ingredients-input" />
+            </label>
 
+            <label>
+                Quantity:
+                <input type="text" name="quantity" id="quantity" />
+            </label>
+
+            <label>Measurement:
+               <select name="measurement" id ="serving">
+                   <option value="cups">Cups</option>
+                   <option value="grams">Grams</option>
+                   <option value="ml">Milliliter</option>
+                   <option value="tsp">Teaspoon</option>
+                   <option value="tbsp">Tablespoon</option>
+               </select>
+            </label>
+            <button type="submit">Add Ingredients</button>
+           </form>
+           <div class="ingredient-list">
+               <ul id="ingredient-list">
+               </ul>
+               <button id="removeList">Remove last item</button>
+           </div>
+       </div>
         </section>
 
+        <section class="save">
+            <h4>Save Meal</h4>
+            <label> Meal Name 
+                <input type="text" id="meal-name">
+            </label>
 
+            <button type="submit" id="save-meal">Save Meal</button>
+
+
+        </section>
+<section>
+    <h5>Meals</h5>
+    <ul id="meal-list"></ul>
+    <ul id="food-list"></ul>   
+</section>
 
     </main>
     <footer>
